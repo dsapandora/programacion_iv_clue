@@ -1,4 +1,4 @@
-murderer(X) :- bagof(Y,contradictsPerson(X,Y),Ys), length(Ys,N), N > 1.
+murderer(X) :- bagof(Y,contradictsPerson(X,Y),Ys), length(Ys,N), N >= 1.
 
 contradictsPerson(A,B) :-
 claims(A,AClaims), claims(B,BClaims), contradictsClaims(AClaims,BClaims).
